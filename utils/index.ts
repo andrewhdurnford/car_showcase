@@ -17,11 +17,11 @@ return result;
 }
 
 export const updateSearchParams = (type: string, value: string) => {
-    const searchParams = new URLSearchParams(window.location.search);
+    const SearchParams = new URLSearchParams(window.location.search);
     
-    searchParams.set(type, value)
+    SearchParams.set(type, value)
 
-    const newPathName = `${window.location.pathname}?${searchParams.toString()}`
+    const newPathName = `${window.location.pathname}?${SearchParams.toString()}`
 
     return newPathName
 }
