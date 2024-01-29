@@ -16,6 +16,10 @@ export interface SearchManufacturerProps {
     setManufacturer: (manufacturer: string) => void;
 }
 
+export interface HomeProps {
+    searchParams: FilterProps;
+  }
+
 export interface CarProps {
     city_mpg: number;
     class: string;

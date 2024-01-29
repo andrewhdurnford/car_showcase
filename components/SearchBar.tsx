@@ -35,21 +35,21 @@ const SearchBar = () => {
     
 
     const updateSearchParams = (model: string, manufacturer: string) => {
-      const SearchParams = new URLSearchParams(window.location.search);
+      const searchParams = new URLSearchParams(window.location.search);
       
       if(model) {
-        SearchParams.set('model', model)
+        searchParams.set('model', model)
       } else {
-        SearchParams.delete('model')
+        searchParams.delete('model')
       }
 
       if(manufacturer) {
-        SearchParams.set('manufacturer', manufacturer)
+        searchParams.set('manufacturer', manufacturer)
       } else {
-        SearchParams.delete('manufacturer')
+        searchParams.delete('manufacturer')
       }
 
-      const newPathname = `${window.location.pathname}?${SearchParams.toString()}`
+      const newPathname = `${window.location.pathname}?${searchParams.toString()}`
 
       router.push(newPathname, { scroll: false })
     }
